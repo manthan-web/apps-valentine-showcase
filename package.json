@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.4.1",
+    "@astrojs/netlify": "^6.6.4",
     "@astrojs/tailwind": "^5.1.0",
     "@fontsource/great-vibes": "^5.2.8",
     "@fontsource/meow-script": "^5.0.8",
