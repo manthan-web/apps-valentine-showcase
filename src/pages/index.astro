@@ -2,7 +2,6 @@
 import { Image } from "astro:assets";
 import { getEntry } from "astro:content";
 import BaseLayout from "@/layouts/base.astro";
-import github from "@/assets/github.svg";
 
 const { data } = await getEntry("loves", "main");
 const {
@@ -13,6 +12,7 @@ const {
   acceptText,
   pendingImage,
   acceptedImage,
+  couplePhoto,
 } = data;
 ---
 
@@ -61,10 +61,24 @@ const {
 
 <BaseLayout title={title}>
   <main
-    class="w-full min-h-dvh flex flex-col gap-4 items-center justify-center p-4 bg-primary text-primary-mono"
+    class="w-full min-h-dvh flex flex-col gap-6 items-center justify-center p-4 bg-primary text-primary-mono"
     id="main"
     data-rejection-text={rejectionText}
   >
+    <!-- Cute couple photo at the top -->
+    {couplePhoto && (
+      <div class="relative">
+        <div class="absolute inset-0 bg-gradient-to-r from-secondary via-tertiary to-secondary rounded-full blur-xl opacity-50 animate-pulse"></div>
+        <Image
+          src={couplePhoto}
+          alt="Us 💕"
+          width={150}
+          height={150}
+          class="relative w-[150px] h-[150px] rounded-full object-cover border-4 border-primary-mono shadow-2xl"
+        />
+      </div>
+    )}
+
     <section
       id="header-initial"
       class="flex flex-col gap-4 items-center justify-center"
@@ -75,7 +89,7 @@ const {
         alt={"Pending Image"}
         width={480}
         height={380}
-        class="opacity-75 pr-8 rounded-[2rem] mx-auto w-[480px] h-[380px]"
+        class="rounded-[2rem] mx-auto w-[480px] h-[380px]"
       />
     </section>
 
@@ -89,7 +103,7 @@ const {
         alt="Accepted Image"
         width={480}
         height={380}
-        class="opacity-75 rounded-[2rem] mx-auto w-[480px] h-[380px]"
+        class="rounded-[2rem] mx-auto w-[480px] h-[380px]"
       />
     </section>
 
@@ -99,30 +113,14 @@ const {
     >
       <button
         id="btn-yes"
-        class="text-3xl py-2 px-8 rounded-xl bg-secondary hover:bg-secondary-mono transition-colors duration-300 w-fit"
+        class="text-3xl py-2 px-8 rounded-xl bg-secondary hover:bg-secondary-mono transition-all duration-300 w-fit text-white font-bold shadow-lg hover:scale-105"
         >{acceptText}</button
       >
       <button
         id="btn-no"
-        class="text-3xl py-2 px-8 rounded-xl bg-tertiary hover:bg-tertiary-mono transition-colors duration-300 w-fit"
+        class="text-3xl py-2 px-8 rounded-xl bg-tertiary hover:bg-tertiary-mono transition-colors duration-300 w-fit text-white font-bold shadow-lg"
         >{rejectionText[0]}</button
       >
-    </section>
-
-    <section id="footer">
-      <a
-        href="https://github.com/withered-flowers/apps-valentine-showcase"
-        class="text-primary-mono transition-colors duration-300 flex gap-2 items-center justify-center bg-secondary-mono hover:bg-tertiary-mono hover:text-black px-3 py-2 text-sm rounded-xl"
-      >
-        <Image
-          src={github}
-          alt="Github"
-          densities={[1]}
-          class="w-8 h-8 opacity-50"
-        />
-        <span class="text-black opacity-50 font-sans">Github (Source Code)</span
-        >
-      </a>
     </section>
   </main>
 </BaseLayout>

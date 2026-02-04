@@ -5,7 +5,7 @@ title: "My Valentine"
 
 # openingPhrase: string
 # Will be used for opening phrase (header on main page)
-openingPhrase: "Will you be my valentine?"
+openingPhrase: "Manthan to mafi milege buguu?"
 
 # acceptedPhrase: string
 # Will be used for accepted phrase (header on main page, when yes is pressed)
@@ -40,4 +40,8 @@ pendingImage: "./images/mocha-love-you.gif"
 # Will be used when Left button (Yes) is pressed
 # Image MUST be inside `src/content/loves`
 acceptedImage: "./images/milk-mocha-hug.gif"
+
+# couplePhoto: Image
+# Optional personal photo to display
+couplePhoto: "./images/photo.jpeg"
 ---

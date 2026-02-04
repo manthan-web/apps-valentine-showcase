@@ -11,6 +11,7 @@ const lovesCollection = defineCollection({
 			acceptText: z.string(),
 			pendingImage: image(),
 			acceptedImage: image(),
+			couplePhoto: image().optional(),
 		}),
 });
 

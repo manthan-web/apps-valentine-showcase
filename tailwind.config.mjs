@@ -6,16 +6,16 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				primary: "#FDF2F8",
-				secondary: "#F8FDF2",
-				tertiary: "#F2F8FD",
-				"primary-mono": "#F6C6E0",
-				"secondary-mono": "#E0F6C6",
-				"tertiary-mono": "#C6E0F6",
+				primary: "#1a0a12",           /* Deep romantic burgundy-black */
+				secondary: "#FF6B8A",         /* Vibrant coral-pink for buttons */
+				tertiary: "#FF4D6D",          /* Rich rose for No button */
+				"primary-mono": "#FF9EB5",    /* Soft pink for text & accents */
+				"secondary-mono": "#FF85A1",  /* Deeper pink for hover states */
+				"tertiary-mono": "#FFB6C7",   /* Light pink for hover */
 			},
 			fontFamily: {
-				primary: ["Meow Script", ...defaultTheme.fontFamily.sans],
-				secondary: ["Rancho", ...defaultTheme.fontFamily.sans],
+				primary: ["Great Vibes", "cursive"],
+				secondary: ["Quicksand", "sans-serif"],
 			},
 		},
 	},

@@ -1,3 +1,4 @@
-/* Change the imported font here and extend it on tailwind.config.mjs */
-@import "@fontsource/meow-script";
-@import "@fontsource/rancho";
+/* Romantic fonts for dark theme */
+@import "@fontsource/great-vibes";
+@import "@fontsource/quicksand/500.css";
+@import "@fontsource/quicksand/600.css";
