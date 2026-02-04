@@ -5,7 +5,7 @@ title: "My Valentine"
 
 # openingPhrase: string
 # Will be used for opening phrase (header on main page)
-openingPhrase: "Manthan to mafi milege buguu?"
+openingPhrase: "Manthan ko mafi milege buguu?"
 
 # acceptedPhrase: string
 # Will be used for accepted phrase (header on main page, when yes is pressed)
